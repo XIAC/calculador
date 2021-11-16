@@ -4,15 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { MensajeComponent } from './mensaje/mensaje.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ListaComponent } from './lista/lista.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculadoraComponent,
-    MensajeComponent
+    MensajeComponent,
+    FormularioComponent,
+    ListaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
