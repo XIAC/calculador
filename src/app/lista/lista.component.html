@@ -3,8 +3,19 @@
 <!-- {{entradaTarea | json}} -->
 <div>
     <ul *ngFor="let tarea of  entradaTarea">
-        <li>TITULO: {{tarea.titulo}}</li>
-        <li>DESCRIPCION: {{tarea.descripcion}}</li>
+        <li [ngClass] = "{'text-success': tarea.titulo === 'simpsons'}">TITULO: {{tarea.titulo}}</li>
+        <!-- <li>DESCRIPCION: {{tarea.descripcion}}</li> -->
         *****************************
     </ul>
 </div>
+<!-- titulo == Simpsons ---> verde -->
+<!-- 
+<h4>NgClass</h4>
+<ul *ngFor="let person of people">
+  <li [ngClass]="{
+    'text-success':person.country === 'UK',
+    'text-primary':person.country === 'USA',
+    'text-danger':person.country === 'HK'
+  }">{{ person.name }} ({{ person.country }})
+  </li>
+</ul> -->
