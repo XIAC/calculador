@@ -7,6 +7,9 @@ import { MensajeComponent } from './mensaje/mensaje.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { ListaComponent } from './lista/lista.component';
 import { FormsModule } from '@angular/forms';
+import { AppRutasModule, rutas } from './app-rutas.module';
+import { RouterModule } from '@angular/router';
+import { TopMenuComponent } from './top-menu/top-menu.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { FormsModule } from '@angular/forms';
     CalculadoraComponent,
     MensajeComponent,
     FormularioComponent,
-    ListaComponent
+    ListaComponent,
+    TopMenuComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRutasModule,
+    RouterModule.forRoot(rutas)
   ],
   providers: [],
   bootstrap: [AppComponent]
